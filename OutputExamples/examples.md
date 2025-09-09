@@ -1,3 +1,6 @@
+## Using Predictions To Inform Generation
+This combines generative and predictive AI into one cohesive system.
+
 ~~~
 [ 0.10289231241251283, version0p1p1 ] About 1.0289231241251282 of malicious users are humans.
 [ 0.05956923358748719, version0p1p0 ] About 0.5956923358748719 of malicious users are bots.
