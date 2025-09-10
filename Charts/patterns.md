@@ -47,3 +47,45 @@ flowchart LR
     D2 --> E2
     D3 --> E3
 ~~~
+
+~~~mermaid
+flowchart LR
+    subgraph "Traditional Intelligence"
+        direction TB
+        T1["Information Collection"] --> T2["Analysis"]
+        T2 --> T3["Reporting"]
+        
+        style T1 fill:#FFE4B5,stroke:#DAA520,color:#000000
+        style T2 fill:#98FB98,stroke:#228B22,color:#000000
+        style T3 fill:#87CEEB,stroke:#4169E1,color:#000000
+    end
+    
+    subgraph "Three Known Facts"
+        direction TB
+        F1["Fact Selection"] --> F2["Confidence Assessment"]
+        F2 --> F3["Pattern Integration"]
+        F3 --> F4["Adaptive Reasoning"]
+        
+        style F1 fill:#FFB6C1,stroke:#8B0000,color:#000000
+        style F2 fill:#ADD8E6,stroke:#00008B,color:#000000
+        style F3 fill:#87CEEB,stroke:#4169E1,color:#000000
+        style F4 fill:#DDA0DD,stroke:#4B0082,color:#000000
+    end
+    
+    T1 -.->|"Evolution"| F1
+    T2 -.->|"Evolution"| F2
+    T3 -.->|"Evolution"| F3
+    
+    subgraph "Example: Pet Analysis"
+        E1["Fact 1: Cats are cleanest pets"] --> E2["Fact 2: Dogs are man's best friend"]
+        E2 --> E3["Fact 3: Gerbils don't use hamster wheels"]
+        
+        style E1 fill:#FFE4B5,stroke:#DAA520,color:#000000
+        style E2 fill:#98FB98,stroke:#228B22,color:#000000
+        style E3 fill:#87CEEB,stroke:#4169E1,color:#000000
+    end
+    
+    F1 --> E1
+    F2 --> E2
+    F3 --> E3
+~~~
