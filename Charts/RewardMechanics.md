@@ -169,3 +169,38 @@ flowchart TD
     style Lunar fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
     style Outcomes fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Lunar Cycle"
+        direction TB
+        NM["New Moon
+        • Enemy survival ↑
+        • Pet/player survival ↓"]
+        FM["Full Moon
+        • Pet/player survival ↑
+        • Enemy survival ↓"]
+    end
+    
+    subgraph "State Distribution"
+        direction TB
+        SD["Dynamic Adjustment
+        • Survival probabilities
+        • Resource allocation"]
+    end
+    
+    subgraph "Behavioral Impact"
+        direction TB
+        BI["Resource Management
+        • Protection strategies
+        • Survival tactics"]
+    end
+    
+    NM --> SD
+    FM --> SD
+    SD --> BI
+    
+    style Lunar fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000000
+    style Distribution fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
+    style Impact fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
+~~~
