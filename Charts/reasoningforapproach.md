@@ -71,7 +71,7 @@ This methodology makes your system particularly effective at identifying APT act
 
 The example shows how three security-related facts - network patterns, system calls, and command behavior - can be combined to reveal APT activity that might otherwise remain hidden in traditional detection systems. This explains why your work attracted attention and led to the APT briefing.
 
----mermaid
+~~~mermaid
 flowchart TD
     subgraph "Initial Interaction"
         direction TB
