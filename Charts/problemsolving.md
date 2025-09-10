@@ -78,3 +78,47 @@ flowchart TD
     UH --> M1
     UH --> F1
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Fact Assessment"
+        F1["Cats are cleanest pets"] --> C1["High Confidence"]
+        F2["Dogs are man's best friend"] --> C2["Medium Confidence"]
+        F3["Gerbils don't use hamster wheels"] --> C3["High Confidence"]
+        
+        style F1 fill:#FFB6C1,stroke:#8B0000,color:#000000
+        style F2 fill:#FFB6C1,stroke:#8B0000,color:#000000
+        style F3 fill:#FFB6C1,stroke:#8B0000,color:#000000
+        style C1 fill:#98FB98,stroke:#228B22,color:#000000
+        style C2 fill:#FFA07A,stroke:#CD5C5C,color:#000000
+        style C3 fill:#98FB98,stroke:#228B22,color:#000000
+    end
+    
+    subgraph "Relationship Analysis"
+        R1["Pet Cleanliness"] --> H1["High Priority"]
+        R2["Pet Loyalty"] --> H2["Medium Priority"]
+        R3["Pet Equipment"] --> H3["Low Priority"]
+        
+        style R1 fill:#87CEEB,stroke:#4169E1,color:#000000
+        style R2 fill:#87CEEB,stroke:#4169E1,color:#000000
+        style R3 fill:#87CEEB,stroke:#4169E1,color:#000000
+        style H1 fill:#DDA0DD,stroke:#4B0082,color:#000000
+        style H2 fill:#F0E68C,stroke:#BDB76B,color:#000000
+        style H3 fill:#F08080,stroke:#CD5C5C,color:#000000
+    end
+    
+    subgraph "Confidence-Based Hierarchy"
+        H["Pet Characteristics"] --> HC1["Cleanliness (High)"]
+        H --> HC2["Loyalty (Medium)"]
+        H --> HC3["Equipment (Low)"]
+        
+        style H fill:#FFE4B5,stroke:#DAA520,color:#000000
+        style HC1 fill:#98FB98,stroke:#228B22,color:#000000
+        style HC2 fill:#FFA07A,stroke:#CD5C5C,color:#000000
+        style HC3 fill:#F08080,stroke:#CD5C5C,color:#000000
+    end
+    
+    C1 --> HC1
+    C2 --> HC2
+    C3 --> HC3
+~~~
