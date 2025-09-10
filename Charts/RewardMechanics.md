@@ -252,3 +252,48 @@ flowchart TD
     style Prediction fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
     style Integration fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Phase Data"
+        direction TB
+        P1["New Moon
+        • Most dangerous
+        • High risk phase"]
+        P2["Full Moon
+        • Brightest state
+        • Peak visibility"]
+        P3["Waxing Crescent
+        • Growing phase
+        • Increasing light"]
+    end
+    
+    subgraph "Confidence System"
+        direction TB
+        C1["Random Selection
+        • Phase labels
+        • Descriptions"]
+        C2["Confidence Calculation
+        • Missing information
+        • Context analysis"]
+    end
+    
+    subgraph "Integration"
+        direction TB
+        I1["Pattern Recognition
+        • Phase patterns
+        • Survival trends"]
+        I2["Knowledge Updates
+        • Dictionary entries
+        • Confidence scores"]
+    end
+    
+    P1 & P2 & P3 --> C1
+    C1 --> C2
+    C2 --> I1
+    I1 --> I2
+    
+    style Phase fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000000
+    style Confidence fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
+    style Integration fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
+~~~
