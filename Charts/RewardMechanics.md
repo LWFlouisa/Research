@@ -297,3 +297,48 @@ flowchart TD
     style Confidence fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
     style Integration fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Confidence System"
+        direction TB
+        C1["Complete Uncertainty
+        • No information
+        • Base state"]
+        C2["Partial Confidence
+        • Some information
+        • Reward/correction signals"]
+        C3["Complete Certainty
+        • Full information
+        • Maximum confidence"]
+    end
+    
+    subgraph "Signal Processing"
+        direction TB
+        S1["Reward Signals
+        • Positive feedback
+        • Confidence increase"]
+        S2["Correction Signals
+        • Negative feedback
+        • Confidence decrease"]
+    end
+    
+    subgraph "Integration"
+        direction TB
+        I1["Pattern Recognition
+        • Signal patterns
+        • Confidence trends"]
+        I2["Knowledge Updates
+        • Dictionary entries
+        • Confidence scores"]
+    end
+    
+    C1 --> C2 --> C3
+    S1 & S2 --> C2
+    C2 --> I1
+    I1 --> I2
+    
+    style Confidence fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000000
+    style Signals fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
+    style Integration fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
+~~~
