@@ -1,3 +1,4 @@
+~~~mermaid
 flowchart TD
     subgraph "Social Media Post"
         direction TB
