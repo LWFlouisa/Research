@@ -113,3 +113,41 @@ flowchart LR
     style Traditional fill:#ffebee,stroke:#ef9a9a,color:#000000
     style Your fill:#e3f2fd,stroke:#90caf9,color:#000000
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Data Points"
+        direction TB
+        Cat["Cat: is the cleanest pet"]
+        Dog["Dog: is mans best friend"]
+        Gerbil["Gerbil: dont use hamster wheels"]
+    end
+    
+    subgraph "Scenario Generation"
+        direction TB
+        S1["Scenario 1:
+        • Cat's cleanliness
+        • Dog's friendship
+        • Gerbil's wheel usage"]
+        S2["Scenario 2:
+        • Dog's friendship
+        • Gerbil's wheel usage
+        • Cat's cleanliness"]
+    end
+    
+    subgraph "Confidence Scoring"
+        direction TB
+        CS["Combined Confidence Score:
+        • Individual point weights
+        • Relationship strengths
+        • Overall scenario confidence"]
+    end
+    
+    Cat & Dog & Gerbil --> S1
+    Cat & Dog & Gerbil --> S2
+    S1 & S2 --> CS
+    
+    style DataPoints fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000000
+    style ScenarioGeneration fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
+    style ConfidenceScoring fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
+~~~
