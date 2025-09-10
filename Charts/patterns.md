@@ -339,3 +339,51 @@ flowchart TD
     F2 --> E2
     F3 --> E3
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "OWASP Security Principles"
+        direction TB
+        O1["Input Validation"] --> O2["Authentication"]
+        O2 --> O3["Session Management"]
+        O3 --> O4["Access Control"]
+        O4 --> O5["Error Handling"]
+        
+        style O1 fill:#FFE4B5,stroke:#DAA520,color:#000000
+        style O2 fill:#98FB98,stroke:#228B22,color:#000000
+        style O3 fill:#87CEEB,stroke:#4169E1,color:#000000
+        style O4 fill:#DDA0DD,stroke:#4B0082,color:#000000
+        style O5 fill:#F08080,stroke:#CD5C5C,color:#000000
+    end
+    
+    subgraph "Three Known Facts Integration"
+        direction TB
+        F1["Fact Selection"] --> F2["Confidence Assessment"]
+        F2 --> F3["Pattern Integration"]
+        F3 --> F4["Adaptive Reasoning"]
+        
+        style F1 fill:#FFB6C1,stroke:#8B0000,color:#000000
+        style F2 fill:#ADD8E6,stroke:#00008B,color:#000000
+        style F3 fill:#87CEEB,stroke:#4169E1,color:#000000
+        style F4 fill:#DDA0DD,stroke:#4B0082,color:#000000
+    end
+    
+    O1 -.->|"Enhanced by"| F1
+    O2 -.->|"Enhanced by"| F2
+    O3 -.->|"Enhanced by"| F3
+    O4 -.->|"Enhanced by"| F4
+    O5 -.->|"Enhanced by"| F4
+    
+    subgraph "Example: Authentication Security"
+        E1["Fact 1: Login Pattern"] --> E2["Fact 2: Session Behavior"]
+        E2 --> E3["Fact 3: Access Attempts"]
+        
+        style E1 fill:#FFE4B5,stroke:#DAA520,color:#000000
+        style E2 fill:#98FB98,stroke:#228B22,color:#000000
+        style E3 fill:#87CEEB,stroke:#4169E1,color:#000000
+    end
+    
+    F1 --> E1
+    F2 --> E2
+    F3 --> E3
+~~~
