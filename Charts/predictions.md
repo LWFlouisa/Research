@@ -151,3 +151,34 @@ flowchart TD
     style ScenarioGeneration fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
     style ConfidenceScoring fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Initial State"
+        direction TB
+        I1["Scenario 1: 0.33"]
+        I2["Scenario 2: 0.33"]
+        I3["Scenario 3: 0.33"]
+    end
+    
+    subgraph "After Correction"
+        direction TB
+        C1["Scenario 1: 0.33"]
+        C2["Scenario 2: 0.15"]
+        C3["Scenario 3: 0.52"]
+    end
+    
+    subgraph "Refactoring Process"
+        direction TB
+        R1["Add small value (0.1)"]
+        R2["Normalize total = 1.0"]
+    end
+    
+    I1 & I2 & I3 --> C1 & C2 & C3
+    C1 & C2 & C3 --> R1
+    R1 --> R2
+    
+    style Initial fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000000
+    style Correction fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
+    style Refactoring fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
+~~~
