@@ -127,3 +127,45 @@ flowchart TD
     style Behavior fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
     style System fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Base System"
+        direction TB
+        B1["Equal Stats
+        • HP = ATK = DEF"]
+        B2["Economic Model
+        • Resource Management
+        • Behavior Patterns"]
+    end
+    
+    subgraph "Lunar Effects"
+        direction TB
+        L1["Phase Impact
+        • Behavioral Changes
+        • Resource Allocation"]
+        L2["Cycle Patterns
+        • Long-term Effects
+        • System Adaptation"]
+    end
+    
+    subgraph "Behavioral Outcomes"
+        direction TB
+        O1["Resource Distribution
+        • Protection Priority
+        • Survival Strategies"]
+        O2["System Adaptation
+        • Learning Patterns
+        • Behavioral Evolution"]
+    end
+    
+    B1 --> L1
+    B2 --> L1
+    L1 --> L2
+    L2 --> O1
+    O1 --> O2
+    
+    style Base fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000000
+    style Lunar fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
+    style Outcomes fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
+~~~
