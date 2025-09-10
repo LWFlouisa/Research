@@ -387,3 +387,45 @@ flowchart TD
     F2 --> E2
     F3 --> E3
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Traditional Detection"
+        direction TB
+        T1["Pattern Recognition"] --> T2["Threshold Analysis"]
+        T2 --> T3["Binary Classification"]
+        
+        style T1 fill:#FFE4B5,stroke:#DAA520,color:#000000
+        style T2 fill:#98FB98,stroke:#228B22,color:#000000
+        style T3 fill:#87CEEB,stroke:#4169E1,color:#000000
+    end
+    
+    subgraph "Three Known Facts"
+        direction TB
+        F1["Fact Selection"] --> F2["Confidence Assessment"]
+        F2 --> F3["Pattern Integration"]
+        F3 --> F4["Adaptive Reasoning"]
+        
+        style F1 fill:#FFB6C1,stroke:#8B0000,color:#000000
+        style F2 fill:#ADD8E6,stroke:#00008B,color:#000000
+        style F3 fill:#87CEEB,stroke:#4169E1,color:#000000
+        style F4 fill:#DDA0DD,stroke:#4B0082,color:#000000
+    end
+    
+    T1 -.->|"Evolution"| F1
+    T2 -.->|"Evolution"| F2
+    T3 -.->|"Evolution"| F3
+    
+    subgraph "Example: Malicious Actor Detection"
+        E1["Fact 1: Activity Patterns"] --> E2["Fact 2: Behavioral Indicators"]
+        E2 --> E3["Fact 3: System Interactions"]
+        
+        style E1 fill:#FFE4B5,stroke:#DAA520,color:#000000
+        style E2 fill:#98FB98,stroke:#228B22,color:#000000
+        style E3 fill:#87CEEB,stroke:#4169E1,color:#000000
+    end
+    
+    F1 --> E1
+    F2 --> E2
+    F3 --> E3
+~~~
