@@ -86,3 +86,44 @@ flowchart TD
     style Behavior fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
     style System fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Economic Model"
+        direction TB
+        E1["Middle Class Setup
+        • Equal resources
+        • Balanced incentives"]
+        E2["Stress Conditions
+        • Limited resources
+        • Survival pressure"]
+    end
+    
+    subgraph "Behavior Patterns"
+        direction TB
+        B1["Human Protection
+        • Pet preservation
+        • Resource allocation"]
+        B2["Resource Management
+        • Survival strategies
+        • Priority setting"]
+    end
+    
+    subgraph "System Outcomes"
+        direction TB
+        S1["Survival Patterns
+        • Pet survival
+        • Human sacrifice"]
+        S2["Resource Distribution
+        • Protection allocation
+        • Sacrifice patterns"]
+    end
+    
+    E1 --> E2
+    E2 --> B1 & B2
+    B1 & B2 --> S1 & S2
+    
+    style Economic fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000000
+    style Behavior fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
+    style System fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
+~~~
