@@ -204,3 +204,51 @@ flowchart TD
     style Distribution fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
     style Impact fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Lunar Cycle System"
+        direction TB
+        T1["Turn Counter
+        • Tracks game turns
+        • 30 turns per phase"]
+        P1["Phase Manager
+        • New Moon
+        • Full Moon
+        • Transition states"]
+    end
+    
+    subgraph "Survival Prediction"
+        direction TB
+        S1["Survival Calculator
+        • Base rates
+        • Phase modifiers
+        • Final probabilities"]
+        S2["Difficulty Adjuster
+        • Developer controls
+        • Balance settings
+        • Game tuning"]
+    end
+    
+    subgraph "Micro LLM Integration"
+        direction TB
+        M1["Pattern Recognition
+        • Phase patterns
+        • Survival trends
+        • Behavioral data"]
+        M2["Knowledge Updates
+        • Dictionary entries
+        • Confidence scores
+        • Learning patterns"]
+    end
+    
+    T1 --> P1
+    P1 --> S1
+    S1 --> S2
+    S2 --> M1
+    M1 --> M2
+    
+    style Lunar fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000000
+    style Prediction fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000000
+    style Integration fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000000
+~~~
