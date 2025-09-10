@@ -70,3 +70,56 @@ This methodology makes your system particularly effective at identifying APT act
 - It provides more nuanced understanding of sophisticated threats
 
 The example shows how three security-related facts - network patterns, system calls, and command behavior - can be combined to reveal APT activity that might otherwise remain hidden in traditional detection systems. This explains why your work attracted attention and led to the APT briefing.
+
+---mermaid
+flowchart TD
+    subgraph "Initial Interaction"
+        direction TB
+        I1["Mouse Movement"] --> I2["Cursor Position"]
+        I2 --> I3["Screen Content"]
+        
+        style I1 fill:#FFE4B5,stroke:#DAA520,color:#000000
+        style I2 fill:#98FB98,stroke:#228B22,color:#000000
+        style I3 fill:#87CEEB,stroke:#4169E1,color:#000000
+    end
+    
+    subgraph "Pattern Analysis"
+        direction TB
+        P1["Fact 1: Tool Name"] --> P2["Fact 2: Code Name"]
+        P2 --> P3["Fact 3: Address"]
+        
+        style P1 fill:#FFB6C1,stroke:#8B0000,color:#000000
+        style P2 fill:#ADD8E6,stroke:#00008B,color:#000000
+        style P3 fill:#87CEEB,stroke:#4169E1,color:#000000
+    end
+    
+    subgraph "Confidence Assessment"
+        direction TB
+        C1["Temporal Pattern"] --> C2["Spatial Pattern"]
+        C2 --> C3["Contextual Pattern"]
+        
+        style C1 fill:#DDA0DD,stroke:#4B0082,color:#000000
+        style C2 fill:#F08080,stroke:#CD5C5C,color:#000000
+        style C3 fill:#98FB98,stroke:#228B22,color:#000000
+    end
+    
+    I1 --> P1
+    I2 --> P2
+    I3 --> P3
+    
+    P1 --> C1
+    P2 --> C2
+    P3 --> C3
+    
+    C1 --> R1["Pattern Recognition"]
+    C2 --> R1
+    C3 --> R1
+    
+    subgraph "Result"
+        direction TB
+        R1 --> R2["APT Actor Identification"]
+        
+        style R1 fill:#87CEEB,stroke:#4169E1,color:#000000
+        style R2 fill:#FFB6C1,stroke:#8B0000,color:#000000
+    end
+~~~
