@@ -266,7 +266,7 @@ flowchart TD
     style Distributed fill:#f5f5f5,stroke:#666,color:#000
 ~~~
 
-~~~
+~~~mermaid
 flowchart TD
     subgraph "Physical Transfer Process"
         direction TB
