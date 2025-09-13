@@ -130,3 +130,196 @@ flowchart TD
     
     style Localized fill:#f5f5f5,stroke:#666,color:#000
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Physical Sneakernet Network"
+        direction TB
+        P1["Physical Node 1
+        • Isolated System
+        • Air-Gapped
+        • Physical Transfer"]
+        P2["Physical Node 2
+        • Isolated System
+        • Air-Gapped
+        • Physical Transfer"]
+        P3["Physical Node 3
+        • Isolated System
+        • Air-Gapped
+        • Physical Transfer"]
+        
+        P1 -.->|"Physical Media
+        Transfer"| P2
+        P2 -.->|"Physical Media
+        Transfer"| P3
+        
+        subgraph "Physical Security"
+            PS1["• Physical Isolation
+            • Air Gap
+            • Media Control"]
+            PS2["• Physical Isolation
+            • Air Gap
+            • Media Control"]
+            PS3["• Physical Isolation
+            • Air Gap
+            • Media Control"]
+        end
+        
+        P1 --- PS1
+        P2 --- PS2
+        P3 --- PS3
+    end
+    
+    subgraph "Logical Model System"
+        direction TB
+        L1["Logical Node 1
+        • Local Processing
+        • Isolated Scope
+        • Secure Transfer"]
+        L2["Logical Node 2
+        • Local Processing
+        • Isolated Scope
+        • Secure Transfer"]
+        L3["Logical Node 3
+        • Local Processing
+        • Isolated Scope
+        • Secure Transfer"]
+        
+        L1 -->|"Secure Channel"| L2
+        L2 -->|"Secure Channel"| L3
+        
+        subgraph "Logical Security"
+            LS1["• Encryption
+            • Authentication
+            • Validation"]
+            LS2["• Encryption
+            • Authentication
+            • Validation"]
+            LS3["• Encryption
+            • Authentication
+            • Validation"]
+        end
+        
+        L1 --- LS1
+        L2 --- LS2
+        L3 --- LS3
+    end
+    
+    style P1,P2,P3 fill:#f9f,stroke:#333,color:#000
+    style L1,L2,L3 fill:#9ff,stroke:#333,color:#000
+    style PS1,PS2,PS3 fill:#dfd,stroke:#333,color:#000
+    style LS1,LS2,LS3 fill:#dfd,stroke:#333,color:#000
+~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Distributed Security Model"
+        direction TB
+        S1["Central Security Control
+        • Coordination
+        • Monitoring
+        • Validation"]
+        
+        subgraph "Isolated Machines"
+            M1["Machine 1
+            • Local Processing
+            • Isolated Environment
+            • Secure State"]
+            M2["Machine 2
+            • Local Processing
+            • Isolated Environment
+            • Secure State"]
+            M3["Machine 3
+            • Local Processing
+            • Isolated Environment
+            • Secure State"]
+        end
+        
+        subgraph "Security Boundaries"
+            SB1["Security Layer 1
+            • Physical Isolation
+            • Access Control
+            • Monitoring"]
+            SB2["Security Layer 2
+            • Physical Isolation
+            • Access Control
+            • Monitoring"]
+            SB3["Security Layer 3
+            • Physical Isolation
+            • Access Control
+            • Monitoring"]
+        end
+        
+        S1 -->|"Control Signal"| M1
+        S1 -->|"Control Signal"| M2
+        S1 -->|"Control Signal"| M3
+        
+        M1 --- SB1
+        M2 --- SB2
+        M3 --- SB3
+        
+        style S1 fill:#f9f,stroke:#333,color:#000
+        style M1,M2,M3 fill:#9ff,stroke:#333,color:#000
+        style SB1,SB2,SB3 fill:#dfd,stroke:#333,color:#000
+    end
+    
+    style Distributed fill:#f5f5f5,stroke:#666,color:#000
+~~~
+
+~~~
+flowchart TD
+    subgraph "Physical Transfer Process"
+        direction TB
+        M1["Source Machine
+        • Isolated System
+        • Secure Environment
+        • Data Preparation"]
+        
+        subgraph "Physical Media"
+            USB["USB Drive
+            • Encrypted Data
+            • Physical Control
+            • Secure Transfer"]
+            HD["External HD
+            • Encrypted Data
+            • Physical Control
+            • Secure Transfer"]
+        end
+        
+        subgraph "Security Measures"
+            S1["• Physical Isolation
+            • Access Control
+            • Monitoring"]
+            S2["• Physical Isolation
+            • Access Control
+            • Monitoring"]
+            S3["• Physical Isolation
+            • Access Control
+            • Monitoring"]
+        end
+        
+        M1 -->|"Physical Removal"| USB
+        M1 -->|"Physical Removal"| HD
+        
+        USB -->|"Physical Transport"| M2["Destination Machine
+        • Isolated System
+        • Secure Environment
+        • Data Validation"]
+        
+        HD -->|"Physical Transport"| M2
+        
+        M1 --- S1
+        USB --- S2
+        M2 --- S3
+        
+        style M1 fill:#f9f,stroke:#333,color:#000
+        style M2 fill:#f9f,stroke:#333,color:#000
+        style USB fill:#9ff,stroke:#333,color:#000
+        style HD fill:#9ff,stroke:#333,color:#000
+        style S1 fill:#dfd,stroke:#333,color:#000
+        style S2 fill:#dfd,stroke:#333,color:#000
+        style S3 fill:#dfd,stroke:#333,color:#000
+    end
+    
+    style Physical fill:#f5f5f5,stroke:#666,color:#000
+~~~
