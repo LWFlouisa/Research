@@ -67,3 +67,66 @@ flowchart TD
     
     style Hierarchical fill:#f5f5f5,stroke:#666,color:#000
 ~~~
+
+~~~mermaid
+flowchart TD
+    subgraph "Localized Model Cluster"
+        direction TB
+        S1["Central Coordinator
+        • Global Learning
+        • Pattern Integration
+        • Knowledge Base"]
+        
+        subgraph "Local Models"
+            L1["Model 1
+            • Local Processing
+            • Independent Operation
+            • Local Learning"]
+            L2["Model 2
+            • Local Processing
+            • Independent Operation
+            • Local Learning"]
+            L3["Model 3
+            • Local Processing
+            • Independent Operation
+            • Local Learning"]
+        end
+        
+        subgraph "Local Operations"
+            O1["Function 1
+            • Local Scope
+            • Isolated Execution
+            • Local State"]
+            O2["Function 2
+            • Local Scope
+            • Isolated Execution
+            • Local State"]
+            O3["Function 3
+            • Local Scope
+            • Isolated Execution
+            • Local State"]
+        end
+        
+        S1 -->|"Control Signal"| L1
+        S1 -->|"Control Signal"| L2
+        S1 -->|"Control Signal"| L3
+        
+        L1 -->|"Execute"| O1
+        L2 -->|"Execute"| O2
+        L3 -->|"Execute"| O3
+        
+        O1 -->|"Local Result"| L1
+        O2 -->|"Local Result"| L2
+        O3 -->|"Local Result"| L3
+        
+        L1 -->|"Pattern Data"| S1
+        L2 -->|"Pattern Data"| S1
+        L3 -->|"Pattern Data"| S1
+        
+        style S1 fill:#f9f,stroke:#333,color:#000
+        style L1,L2,L3 fill:#9ff,stroke:#333,color:#000
+        style O1,O2,O3 fill:#dfd,stroke:#333,color:#000
+    end
+    
+    style Localized fill:#f5f5f5,stroke:#666,color:#000
+~~~
